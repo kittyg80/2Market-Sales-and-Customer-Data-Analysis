@@ -33,15 +33,7 @@ The Marketing_data and Ad_data files were first viewed as text to see delimiters
 
 ![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/03b83527-9599-4cb2-859b-f687e7e0efe9)
 
-•	SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. 
-
-•	To do this, a new table was created which joined the Marketing_data and Ad_data using an inner join and customer ID (‘ID’) as the primary key. The new table contained the country, total sales per product, and lead conversion data for each customer. 
-
-•	A query was created to show the sum of all successful conversions for each advertising channel  when there were sales of each product type (using > 0) by country. Product type was added to a new ‘product’ column, and the query was repeated for each product using a UNION operator. 
-
-•	Results showed the inferred number of successful ad conversions for each advertising channel by product type and country.
-
-•	Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
+•	SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. To do this, a new table was created which joined the Marketing_data and Ad_data using an inner join and customer ID (‘ID’) as the primary key. The new table contained the country, total sales per product, and lead conversion data for each customer. A query was created to show the sum of all successful conversions for each advertising channel  when there were sales of each product type (using > 0) by country. Product type was added to a new ‘product’ column, and the query was repeated for each product using a UNION operator. Results showed the inferred number of successful ad conversions for each advertising channel by product type and country. Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
 
 **2(c) SQL syntax:**
 
