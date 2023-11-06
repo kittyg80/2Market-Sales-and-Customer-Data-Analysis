@@ -4,7 +4,11 @@ This was the first project I completed as part of the LSE Data Analytics Career 
 
 **1. Project background:** 
 
-2Market commissioned this project to better understand its customers, top products and markets by sales, and most effective advertising channels. A kick-off meeting with stakeholders revealed a loss in Q3 2022 revenue that requires immediate cost savings and increased sales. Further investigation shows this was mainly caused by US competition, ineffective marketing, unsuccessful market expansion, and decreased online sales of certain products post-COVID. This project aims to support senior management make decisions about where to focus the business and help regional marketing teams improve campaigns and identify the best advertising channels by product. Stakeholders acknowledged there was no data linking ad conversion to sales but agreed an estimation was sufficient.
+2Market commissioned this project to better understand its customers, top products and markets by sales, and most effective advertising channels. A kick-off meeting with stakeholders revealed a loss in Q3 2022 revenue that requires immediate cost savings and increased sales. Further investigation shows this was mainly caused by US competition, ineffective marketing, unsuccessful market expansion, and decreased online sales of certain products post-COVID. 
+
+![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/60612936-2221-4da3-b764-d01cb1d24c91)
+
+This project aims to support senior management make decisions about where to focus the business and help regional marketing teams improve campaigns and identify the best advertising channels by product. Stakeholders acknowledged there was no data linking ad conversion to sales but agreed an estimation was sufficient.
 
 **2. Analytical approach:**  
 
