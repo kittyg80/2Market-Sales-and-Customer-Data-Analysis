@@ -7,9 +7,9 @@ This was the first project I completed as part of the LSE Data Analytics Career 
 
 **2. Analytical approach:**  
 
-The Marketing_data and Ad_data files were viewed as text to see delimiters and check for any unusual data.
+The Marketing_data and Ad_data files were first viewed as text to see delimiters and check for any unusual data.
  
-Data cleaning:
+**2a.Data cleaning:**
 
 •	A spellcheck and search for blank cells was conducted – no issues detected. 
 
@@ -27,7 +27,7 @@ Data cleaning:
 
 •	The data type for each column was checked and changed accordingly. For any column with a monetary value, the $ symbol was replaced with a blank and then changed to number format.
 
-Data analysis:
+**2b.Data analysis:**
 
 •	Initial exploration with Excel revealed a strong relationship between increasing customer income and sales for all product types. In an interim meeting with the regional marketing teams, income was selected as the most important customer demographic for initial campaigns.
 
@@ -43,7 +43,7 @@ Data analysis:
 
 •	Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
 
-SQL syntax:
+**2c.SQL syntax:**
 
 1.	Create new table
    
