@@ -10,15 +10,14 @@ This was the first project I completed as part of the LSE Data Analytics Career 
 The Marketing_data and Ad_data files were viewed as text to see delimiters and check for any unusual data.
  
 Data cleaning:
-
-•	A spellcheck and search for blank cells was conducted – no issues detected. 
-•	Conditional Formatting was used on the ID column (‘Unique customer ID’) to check for duplicate rows – none were found. 
-•	In the Marital_Status column, ‘YOLO,’ Alone,’ and ‘Absurd’ were replaced with ‘Null,’ as it could not be determined if these meant Single, Divorced, or Widow. 
-•	In the Education column, ‘2n Cycle’ was changed to ‘Master.’
-•	Data in the Country column was changed to full country names, while several column titles were changed to be more informative. 
-•	Outliers were removed for Age and Income. The upper age limit was 89 so customers aged 121, 122 and 128 years were removed, while eight with incomes above $118,351 were removed. 
-•	In the Dt_Customer column, Text to Columns was used to fix any dates not in date format.
-•	The data type for each column was checked and changed accordingly. For any column with a monetary value, the $ symbol was replaced with a blank and then changed to number format.
+A spellcheck and search for blank cells was conducted – no issues detected. 
+Conditional Formatting was used on the ID column (‘Unique customer ID’) to check for duplicate rows – none were found. 
+In the Marital_Status column, ‘YOLO,’ Alone,’ and ‘Absurd’ were replaced with ‘Null,’ as it could not be determined if these meant Single, Divorced, or Widow. 
+In the Education column, ‘2n Cycle’ was changed to ‘Master.’
+Data in the Country column was changed to full country names, while several column titles were changed to be more informative. 
+Outliers were removed for Age and Income. The upper age limit was 89 so customers aged 121, 122 and 128 years were removed, while eight with incomes above $118,351 were removed. 
+In the Dt_Customer column, Text to Columns was used to fix any dates not in date format.
+The data type for each column was checked and changed accordingly. For any column with a monetary value, the $ symbol was replaced with a blank and then changed to number format.
 
 Data analysis:
 
