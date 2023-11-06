@@ -10,6 +10,7 @@ This was the first project I completed as part of the LSE Data Analytics Career 
 The Marketing_data and Ad_data files were viewed as text to see delimiters and check for any unusual data.
  
 Data cleaning:
+
 •	A spellcheck and search for blank cells was conducted – no issues detected. 
 
 •	Conditional Formatting was used on the ID column (‘Unique customer ID’) to check for duplicate rows – none were found. 
@@ -29,6 +30,7 @@ Data cleaning:
 Data analysis:
 
 •	Initial exploration with Excel revealed a strong relationship between increasing customer income and sales for all product types. In an interim meeting with the regional marketing teams, income was selected as the most important customer demographic for initial campaigns.
+
 ![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/03b83527-9599-4cb2-859b-f687e7e0efe9)
 
 •	SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. 
@@ -43,7 +45,8 @@ Data analysis:
 
 SQL syntax:
 
-1.	Create new table 
+1.	Create new table
+   
 CREATE TABLE ad_conversion AS
 SELECT md.id as customer_id, md.marital_status, md.liquor, md.vegetables, md.non_veg, md.fish_products, 
 md.chocolates, md.commodities, md.country, ad.twitter_ad, ad.instagram_ad, ad.facebook_ad, ad.bulkmail_ad, ad.brochure_ad
@@ -51,7 +54,8 @@ FROM public.marketing_data md
 JOIN public.ad_data ad
 USING (id);
 
-2.	Query relationship between product sales and effective advertising conversions by country 
+2.	Query relationship between product sales and effective advertising conversions by country
+   
 SELECT adc.country, 'liquor' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
 SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
 FROM public.ad_conversion adc
