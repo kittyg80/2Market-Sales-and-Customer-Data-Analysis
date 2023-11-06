@@ -10,14 +10,21 @@ This was the first project I completed as part of the LSE Data Analytics Career 
 The Marketing_data and Ad_data files were viewed as text to see delimiters and check for any unusual data.
  
 Data cleaning:
-A spellcheck and search for blank cells was conducted – no issues detected. 
-Conditional Formatting was used on the ID column (‘Unique customer ID’) to check for duplicate rows – none were found. 
-In the Marital_Status column, ‘YOLO,’ Alone,’ and ‘Absurd’ were replaced with ‘Null,’ as it could not be determined if these meant Single, Divorced, or Widow. 
-In the Education column, ‘2n Cycle’ was changed to ‘Master.’
-Data in the Country column was changed to full country names, while several column titles were changed to be more informative. 
-Outliers were removed for Age and Income. The upper age limit was 89 so customers aged 121, 122 and 128 years were removed, while eight with incomes above $118,351 were removed. 
-In the Dt_Customer column, Text to Columns was used to fix any dates not in date format.
-The data type for each column was checked and changed accordingly. For any column with a monetary value, the $ symbol was replaced with a blank and then changed to number format.
+•	A spellcheck and search for blank cells was conducted – no issues detected. 
+
+•	Conditional Formatting was used on the ID column (‘Unique customer ID’) to check for duplicate rows – none were found. 
+
+•	In the Marital_Status column, ‘YOLO,’ Alone,’ and ‘Absurd’ were replaced with ‘Null,’ as it could not be determined if these meant Single, Divorced, or Widow. 
+
+•	In the Education column, ‘2n Cycle’ was changed to ‘Master.’
+
+•	Data in the Country column was changed to full country names, while several column titles were changed to be more informative. 
+
+•	Outliers were removed for Age and Income. The upper age limit was 89 so customers aged 121, 122 and 128 years were removed, while eight with incomes above $118,351 were removed. 
+
+•	In the Dt_Customer column, Text to Columns was used to fix any dates not in date format.
+
+•	The data type for each column was checked and changed accordingly. For any column with a monetary value, the $ symbol was replaced with a blank and then changed to number format.
 
 Data analysis:
 
@@ -25,9 +32,13 @@ Data analysis:
 ![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/03b83527-9599-4cb2-859b-f687e7e0efe9)
 
 •	SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. 
+
 •	To do this, a new table was created which joined the Marketing_data and Ad_data using an inner join and customer ID (‘ID’) as the primary key. The new table contained the country, total sales per product, and lead conversion data for each customer. 
-•	A query was created to show the sum of all successful conversions for each advertising channel  when there were sales of each product type (using > 0) by country. Product type was added to a new ‘product’ column, and the query was repeated for each product using a UNION operator.  
+
+•	A query was created to show the sum of all successful conversions for each advertising channel  when there were sales of each product type (using > 0) by country. Product type was added to a new ‘product’ column, and the query was repeated for each product using a UNION operator. 
+
 •	Results showed the inferred number of successful ad conversions for each advertising channel by product type and country.
+
 •	Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
 
 SQL syntax:
