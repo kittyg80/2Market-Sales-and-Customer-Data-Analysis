@@ -9,7 +9,8 @@ This was the first project I completed as part of the LSE Data Analytics Career 
 
 The Marketing_data and Ad_data files were viewed as text to see delimiters and check for any unusual data.
  
-**Data cleaning: **
+Data cleaning:
+
 •	A spellcheck and search for blank cells was conducted – no issues detected. 
 •	Conditional Formatting was used on the ID column (‘Unique customer ID’) to check for duplicate rows – none were found. 
 •	In the Marital_Status column, ‘YOLO,’ Alone,’ and ‘Absurd’ were replaced with ‘Null,’ as it could not be determined if these meant Single, Divorced, or Widow. 
@@ -19,9 +20,9 @@ The Marketing_data and Ad_data files were viewed as text to see delimiters and c
 •	In the Dt_Customer column, Text to Columns was used to fix any dates not in date format.
 •	The data type for each column was checked and changed accordingly. For any column with a monetary value, the $ symbol was replaced with a blank and then changed to number format.
 
-**Data analysis: **
-•	Initial exploration with Excel revealed a strong relationship between increasing customer income and sales for all product types. In an interim meeting with the regional marketing teams, income was selected as the most important customer demographic for initial campaigns.
+Data analysis:
 
+•	Initial exploration with Excel revealed a strong relationship between increasing customer income and sales for all product types. In an interim meeting with the regional marketing teams, income was selected as the most important customer demographic for initial campaigns.
 ![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/03b83527-9599-4cb2-859b-f687e7e0efe9)
 
 •	SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. 
@@ -30,7 +31,7 @@ The Marketing_data and Ad_data files were viewed as text to see delimiters and c
 •	Results showed the inferred number of successful ad conversions for each advertising channel by product type and country.
 •	Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
 
-*SQL syntax: **
+SQL syntax:
 
 1.	Create new table 
 CREATE TABLE ad_conversion AS
