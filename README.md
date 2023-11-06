@@ -1,4 +1,5 @@
 # 2Market-Sales-and-Customer-Data-Analysis
+
 This was the first project I completed as part of the LSE Data Analytics Career Accelerator course (2022 - 2023), for which I achieved a mark of 88% (distinction). I used Excel, SQL, and Tableau for this project. 
 
 **1. Project background:** 
@@ -29,61 +30,12 @@ The Marketing_data and Ad_data files were first viewed as text to see delimiters
 
 **2(b) Data analysis:**
 
-•	Initial exploration with Excel revealed a strong relationship between increasing customer income and sales for all product types. In an interim meeting with the regional marketing teams, income was selected as the most important customer demographic for initial campaigns.
+Initial exploration with Excel revealed a strong relationship between increasing customer income and sales for all product types. In an interim meeting with the regional marketing teams, income was selected as the most important customer demographic for initial campaigns.
 
 ![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/03b83527-9599-4cb2-859b-f687e7e0efe9)
 
-•	SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. To do this, a new table was created which joined the Marketing_data and Ad_data using an inner join and customer ID (‘ID’) as the primary key. The new table contained the country, total sales per product, and lead conversion data for each customer. A query was created to show the sum of all successful conversions for each advertising channel  when there were sales of each product type (using > 0) by country. Product type was added to a new ‘product’ column, and the query was repeated for each product using a UNION operator. Results showed the inferred number of successful ad conversions for each advertising channel by product type and country. Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
+SQL was used to infer a relationship between product sales and successful lead conversions by advertising channel. To do this, a new table was created which joined the Marketing_data and Ad_data using an inner join and customer ID (‘ID’) as the primary key. The new table contained the country, total sales per product, and lead conversion data for each customer. A query was created to show the sum of all successful conversions for each advertising channel  when there were sales of each product type (using > 0) by country. Product type was added to a new ‘product’ column, and the query was repeated for each product using a UNION operator. Results showed the inferred number of successful ad conversions for each advertising channel by product type and country. Results were saved as the Ad_conversion_by_product CSV file to be uploaded onto Tableau for visualisation.
 
-**2(c) SQL syntax:**
-
-1.	Create new table
-   
-CREATE TABLE ad_conversion AS
-SELECT md.id as customer_id, md.marital_status, md.liquor, md.vegetables, md.non_veg, md.fish_products, 
-md.chocolates, md.commodities, md.country, ad.twitter_ad, ad.instagram_ad, ad.facebook_ad, ad.bulkmail_ad, ad.brochure_ad
-FROM public.marketing_data md
-JOIN public.ad_data ad
-USING (id);
-
-2.	Query relationship between product sales and effective advertising conversions by country
-   
-SELECT adc.country, 'liquor' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
-SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
-FROM public.ad_conversion adc
-WHERE adc.liquor > 0
-GROUP BY adc.country
-UNION
-SELECT adc.country, 'vegatables' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
-SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
-FROM public.ad_conversion adc
-WHERE adc.vegetables > 0
-GROUP BY adc.country
-UNION
-SELECT adc.country, 'non_veg' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
-SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
-FROM public.ad_conversion adc
-WHERE adc.non_veg > 0
-GROUP BY adc.country
-UNION
-SELECT adc.country, 'fish_products' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
-SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
-FROM public.ad_conversion adc
-WHERE adc.fish_products > 0
-GROUP BY adc.country
-UNION
-SELECT adc.country, 'chocolates' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
-SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
-FROM public.ad_conversion adc
-WHERE adc.chocolates > 0
-GROUP BY adc.country
-UNION
-SELECT adc.country, 'commodities' product, SUM(adc.twitter_ad) as Twitter, SUM(adc.instagram_ad) as Instagram, 
-SUM(adc.facebook_ad) as Facebook, SUM(adc.bulkmail_ad) as Bulkmail, SUM(adc.brochure_ad) as Brochure
-FROM public.ad_conversion adc
-WHERE adc.commodities > 0
-GROUP BY adc.country
-ORDER BY country, product;
 
 **3. Dashboard design:** 
 
@@ -93,27 +45,28 @@ The 2Market Dashboard consists of four visualizations and has been designed with
 
 The **Product Sales by Category** and **Product Sales by Country** visualisations were created from the Marketing_data and are intended to quickly show overall sales performance for senior management. This will allow them to make decisions on which markets to focus on or withdraw from, and which products to focus on or discontinue. 
 
-•	**Product Sales by Category** shows product sales as a percentage of total sales. This was creating with a calculated field (‘Total Sales’), with further calculated fields created for each product as a percentage of ‘Total Sales.’ Aliases were created on charts e.g., ‘% Sales Liquor’ changed to ‘Liquor.’ 
+   •	**Product Sales by Category** shows product sales as a percentage of total sales. This was creating with a calculated field (‘Total Sales’), with further calculated fields created for each product as a percentage of ‘Total Sales.’ Aliases were created on charts e.g., ‘% Sales Liquor’ changed to ‘Liquor.’ 
 
-•	The **Product Sales by Country** chart shows sales by country as a percentage of total sales. A map was originally considered, but a bar chart was deemed more impactful.
+   •	The **Product Sales by Country** chart shows sales by country as a percentage of total sales. A map was originally considered, but a bar chart was deemed more impactful.
 
 The **Sales by Income** visualisation was created from the Marketing_data and is intended to support the regional marketing teams assess the impact of customer income on product sales.
 
-•	The data has been broken down by adding income categories to the colour marks, with income categories created using bins of $20,000. 
+   •	The data has been broken down by adding income categories to the colour marks, with income categories created using bins of $20,000. 
 
-•	The chart includes both a filter and dynamic title for Country so data can be seen at a regional level. 
+   •	The chart includes both a filter and dynamic title for Country so data can be seen at a regional level. 
 
-•	A caption has been added to note that tooltips show data as a percentage of total sales and not sales by country.
+   •	A caption has been added to note that tooltips show data as a percentage of total sales and not sales by country.
 
 The **Estimated Ad Conversions by Channel** visualisation is also intended for the regional marketing teams to see the inferred relationship between successful ad conversions and product sales by country. 
 
-•	This was created from the Ad_conversion_by_product data from SQL. 
+   •	This was created from the Ad_conversion_by_product data from SQL. 
 
-•	A dynamic title has been added to show data by country.
+   •	A dynamic title has been added to show data by country.
 
-•	Labels have not been included as the chart is only meant to show which channel may be best. 
+   •	Labels have not been included as the chart is only meant to show which channel may be best. 
 
-•	A caption highlights that the data infers a relationship and should not be used for other purposes.
+   •	A caption highlights that the data infers a relationship and should not be used for other purposes.
+
 
 **4. Patterns, Trends, and Insights:** 
 
@@ -132,6 +85,7 @@ Data also shows that **different customer income impacts total sales**. For exam
 Data shows the **relationship between ad conversions and sales is impacted by country**. For example, sales of non-vegetables are driven by Twitter in Canada but by Instagram in Australia. This will support the regional marketing teams choose effective ad channels.
 
 ![image](https://github.com/kittyg80/2Market-Sales-and-Customer-Data-Analysis/assets/116217853/7cfde542-99c3-4aea-bc1b-da186b436c00)
+
 
 **5. Recommendations for further exploration:** 
 
