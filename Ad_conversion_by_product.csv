@@ -1,0 +1,49 @@
+country,product,twitter,instagram,facebook,bulkmail,brochure
+Australia,Chocolate,4,10,6,7,0
+Australia,Commodities,5,10,6,9,0
+Australia,Fish products,6,12,7,8,0
+Australia,Liquor,6,12,7,9,0
+Australia,Non vegetables,6,12,7,9,0
+Australia,Vegetables,4,11,6,7,0
+Canada,Chocolate,18,18,16,16,3
+Canada,Commodities,23,21,17,18,6
+Canada,Fish products,20,19,15,15,4
+Canada,Liquor,24,21,18,18,6
+Canada,Non vegetables,24,21,18,18,6
+Canada,Vegetables,21,21,15,13,5
+Germany,Chocolate,8,8,7,6,2
+Germany,Commodities,11,8,7,10,2
+Germany,Fish products,6,8,6,7,2
+Germany,Liquor,11,8,7,10,2
+Germany,Non vegetables,11,8,7,10,2
+Germany,Vegetables,8,7,7,9,2
+India,Chocolate,4,6,5,8,1
+India,Commodities,9,6,7,13,1
+India,Fish products,7,6,6,11,2
+India,Liquor,10,6,7,13,2
+India,Non vegetables,10,6,7,13,2
+India,Vegetables,6,6,6,10,1
+Macedonia,Chocolate,0,0,0,1,0
+Macedonia,Commodities,0,0,0,1,0
+Macedonia,Fish products,0,0,0,1,0
+Macedonia,Liquor,0,0,0,1,0
+Macedonia,Non vegetables,0,0,0,1,0
+Macedonia,Vegetables,0,0,0,1,0
+South Africa,Chocolate,15,19,17,18,3
+South Africa,Commodities,18,19,20,21,4
+South Africa,Fish products,13,18,19,16,1
+South Africa,Liquor,20,21,20,21,4
+South Africa,Non vegetables,20,21,20,21,4
+South Africa,Vegetables,14,18,17,17,1
+Spain,Chocolate,62,83,71,66,9
+Spain,Commodities,86,85,73,83,16
+Spain,Fish products,60,77,65,63,10
+Spain,Liquor,87,88,76,82,16
+Spain,Non vegetables,87,88,76,83,16
+Spain,Vegetables,69,83,66,69,12
+US,Chocolate,2,5,7,8,0
+US,Commodities,6,5,7,8,0
+US,Fish products,3,4,5,5,0
+US,Liquor,6,5,7,8,0
+US,Non vegetables,6,5,7,8,0
+US,Vegetables,2,4,6,7,0
