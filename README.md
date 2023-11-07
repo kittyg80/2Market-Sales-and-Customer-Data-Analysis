@@ -1,6 +1,6 @@
 # 2Market-Sales-and-Customer-Data-Analysis
 
-This was the first project I completed as part of the LSE Data Analytics Career Accelerator course (2022 - 2023), for which I achieved a mark of 88% (distinction). I used Excel, SQL, and Tableau for this project. 
+This was the first assignment I completed as part of the LSE Data Analytics Career Accelerator course (2022 - 2023), for which I achieved a mark of 88% (distinction). I used Excel, SQL, and Tableau for this project. 
 
 **1. Project background:** 
 
